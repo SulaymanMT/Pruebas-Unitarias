@@ -47,7 +47,7 @@ public class Matricula {
     @Override
     
     public String toString(){
-        return "Matriculas : "+identificador+" , "+Arrays.toString(alumno)+" , "+turno+" , "+estado;
+        return "Matricula: "+identificador+" , "+Arrays.toString(alumno)+" , "+turno+" , "+estado;
     }
     
     //EQUALS
@@ -93,4 +93,5 @@ public class Matricula {
     public void setEstado(String estado){
         this.estado = estado;
     }
+
 }
