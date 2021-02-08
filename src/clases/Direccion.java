@@ -33,7 +33,7 @@ public class Direccion {
     @Override
     
     public String toString(){
-        return nombre + numero + planta + puerta +codPostal; 
+        return "Direccion: "+nombre +" , "+ numero +" , "+ planta +" , "+ puerta +" , "+codPostal; 
     }
     
     //EQUALS
