@@ -25,10 +25,19 @@ public class Matricula {
     public Matricula (long id, Alumno[] alumno, String turno, String estado){
         this.identificador = id;
         this.alumno = alumno;
-        this.turno = turno;
-        this.estado = estado;
+        if("dia".equals(turno)){
+            this.turno="DIURNO";
+        }if("noche".equals(turno)){
+            this.turno="VESPERTINO";
+        }
+        if("BAJA".equals(estado)){
+            this.estado="BAJA";
+        }
+        if("ALTA".equals(estado)){
+            this.estado="ALTA";
+        }
     }
-    
+
     //ToSTRING
     
     /**
@@ -38,7 +47,7 @@ public class Matricula {
     @Override
     
     public String toString(){
-        return identificador+Arrays.toString(alumno)+turno+estado;
+        return "Matriculas : "+identificador+" , "+Arrays.toString(alumno)+" , "+turno+" , "+estado;
     }
     
     //EQUALS
@@ -69,6 +78,19 @@ public class Matricula {
     public Alumno[] getAlumno(){
         return alumno;
     }
-    
-    
+    public void setAlumno(Alumno[] getAlumno){
+        this.alumno = alumno;
+    }
+    public String getTurno(){
+        return turno;
+    }
+    public void setTurno(String turno){
+        this.turno = turno;
+    }
+    public String getEstado(){
+        return estado;
+    }
+    public void setEstado(String estado){
+        this.estado = estado;
+    }
 }
