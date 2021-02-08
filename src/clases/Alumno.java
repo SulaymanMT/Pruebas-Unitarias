@@ -17,7 +17,7 @@ public class Alumno {
     String apellido2;
     int edad;
     int telefono;
-    int dni;
+    String dni;
     int expediente;
     String correo;
     String nombrePadre;
@@ -28,7 +28,7 @@ public class Alumno {
     public Alumno(){
         
     }
-    public Alumno(int dni,String nombre,String apellido,String apellido2, int edad, int telefono, int expediente,
+    public Alumno(String dni,String nombre,String apellido,String apellido2, int edad, int telefono, int expediente,
             String correo, String nomPadre, String nomMadre,int telMadre,int telPadre,Direccion[] direcciones){
         this.dni= dni;
         this.nombre=nombre;
@@ -50,7 +50,7 @@ public class Alumno {
     }
     //EQUALS
     public boolean equals(Alumno other){
-        if(this.dni != other.dni){
+        if(this.dni.equals(other.dni) ){
             return false;
         }
         if(this.nombre.equals(other.nombre)){
@@ -92,10 +92,10 @@ public class Alumno {
         return true;
     }
     //GETTER y SETTERS
-    public int getDni(){
+    public String getDni(){
         return dni;
     }
-    public void setDni(int dni){
+    public void setDni(String dni){
         this.dni = dni;
     }
     public String getNombre(){
