@@ -24,10 +24,12 @@ public class Alumno {
     String nombreMadre;
     int telMadre;
     int telPadre;
-    Direccion[] direcciones;
+    Direccion[] direcciones ;
+    
     public Alumno(){
         
     }
+    
     public Alumno(String dni,String nombre,String apellido,String apellido2, int edad, int telefono, int expediente,
             String correo, String nomPadre, String nomMadre,int telMadre,int telPadre,Direccion[] direcciones){
         this.dni= dni;
@@ -44,9 +46,10 @@ public class Alumno {
         this.telMadre=telMadre;
         this.direcciones = direcciones;
     }
+    
     @Override
     public String toString(){
-        return dni + nombre + apellido1 + apellido1+ edad+ telefono+ expediente+correo+nombrePadre+nombreMadre+telPadre+telMadre+ Arrays.toString(direcciones); 
+        return "Alumno: "+dni +" , "+ nombre +" , "+ apellido1 +" , "+ apellido1+" , "+ edad+" , "+ telefono+" , "+ expediente+" , "+correo+" , "+nombrePadre+" , "+nombreMadre+" , "+telPadre+" , "+telMadre+" , "+ Arrays.toString(direcciones); 
     }
     //EQUALS
     public boolean equals(Alumno other){
@@ -152,11 +155,12 @@ public class Alumno {
     public void setNombreMadre(String nombreMadre){
         this.nombreMadre = nombreMadre;
     }
-    public Direccion[] getDirecciones(){
-        return direcciones;
+    public String getDirecciones(){
+        return Arrays.toString(direcciones);
     }
     public void setDirecciones(Direccion[] direcciones){
-        this.direcciones = direcciones;
+        this.direcciones =direcciones;
     }
+
     
 }
