@@ -6,7 +6,6 @@
 
 package clases;
 
-import java.util.Arrays;
 
 /**
  *
@@ -14,7 +13,7 @@ import java.util.Arrays;
  */
 public class Matricula {
     long identificador;
-    Alumno[] alumno;
+    Alumno alumno ;
     String turno;
     String estado;
     
@@ -22,7 +21,7 @@ public class Matricula {
         
     }
     
-    public Matricula (long id, Alumno[] alumno, String turno, String estado){
+    public Matricula (long id, Alumno alumno, String turno, String estado){
         this.identificador = id;
         this.alumno = alumno;
         if("dia".equals(turno)){
@@ -36,6 +35,7 @@ public class Matricula {
         if("ALTA".equals(estado)){
             this.estado="ALTA";
         }
+        
     }
 
     //ToSTRING
@@ -47,7 +47,7 @@ public class Matricula {
     @Override
     
     public String toString(){
-        return "Matricula: "+identificador+" , "+Arrays.toString(alumno)+" , "+turno+" , "+estado;
+        return "Matricula: "+identificador+" , "+alumno.getExpediente()+" , "+turno+" , "+estado;
     }
     
     //EQUALS
@@ -55,7 +55,7 @@ public class Matricula {
         if(this.identificador != other.identificador){
             return false;
         }
-        if(Arrays.equals(this.alumno ,other.alumno)){
+        if(this.alumno != alumno){
             return false;
         }
         if(this.turno.equals(turno)){
@@ -75,10 +75,10 @@ public class Matricula {
     public void setIdentificador(long identificador){
         this.identificador = identificador;
     }
-    public Alumno[] getAlumno(){
+    public Alumno getAlumno(){
         return alumno;
     }
-    public void setAlumno(Alumno[] getAlumno){
+    public void setAlumno(Alumno alumno){
         this.alumno = alumno;
     }
     public String getTurno(){
