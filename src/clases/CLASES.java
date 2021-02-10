@@ -20,7 +20,7 @@ public class CLASES {
         Direccion dir1 = new Direccion("Av Africa",13,2,"B1",51002);
         Direccion dir2 = new Direccion("Av Madrid",9,0,"1",51001);
         Direccion dir3 = new Direccion("Av Malaga",10,4,"H4",51002);
-        
+         Direccion[] direcciones = new Direccion[3] ;
         //objeto de clase Alumno
         Alumno a1 = new Alumno();
         a1.setDni("12345679Q");
@@ -31,16 +31,15 @@ public class CLASES {
         a1.setEdad(16);
         a1.setExpediente(100732);
         a1.setTelefono(615121521);
-        a1.setNombrePadre("AHMED");
-        a1.setNombreMadre("JAMILA");
-        
+        a1.setNombrePadre("MOHAMED");
+        a1.setNombreMadre("FATIMA");
         
         //objeto de clase Matricula
         Matricula m1 = new Matricula();
         m1.setIdentificador(1234548588);
         m1.setTurno("Dia");
         m1.setEstado("Alta");
-        m1.getAlumno(a1.getExpediente());
+        
       
         
         System.out.println(m1.toString());
