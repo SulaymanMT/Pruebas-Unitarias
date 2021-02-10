@@ -49,7 +49,7 @@ public class Alumno {
     
     @Override
     public String toString(){
-        return "Alumno: "+dni +" , "+ nombre +" , "+ apellido1 +" , "+ apellido1+" , "+ edad+" , "+ telefono+" , "+ expediente+" , "+correo+" , "+nombrePadre+" , "+nombreMadre+" , "+telPadre+" , "+telMadre+" , "+ Arrays.toString(direcciones); 
+        return "Alumno: "+dni +" , "+ nombre +" , "+ apellido1 +" , "+ apellido1+" , "+ edad+" , "+ telefono+" , "+ expediente+" , "+correo+" , "+nombrePadre+" , "+nombreMadre+" , "+telPadre+" , "+telMadre+" , "+Arrays.toString(direcciones) ; 
     }
     //EQUALS
     public boolean equals(Alumno other){
@@ -161,6 +161,7 @@ public class Alumno {
     public void setDirecciones(Direccion[] direcciones){
         this.direcciones =direcciones;
     }
-
+   
     
 }
+
